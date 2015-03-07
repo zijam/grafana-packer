@@ -1,0 +1,20 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  cache_directories:
+    - "~/docker"
+  pre:
+    - ./build_container.sh
+
+test:
+  override:
+     - echo "test"
+
+deployment:
+  develop:
+    branch: master
+    owner: grafana
+    commands:
+      - ./deploy.sh
