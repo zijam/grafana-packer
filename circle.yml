@@ -9,7 +9,8 @@ dependencies:
 
   pre:
     - if [ -z "$BUCKET_NAME" ]; then echo Bucket name must be specified as an environment variable; exit 1; fi
-    - if [[ ! -d $HOME/aws ]]; then curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip" && unzip awscli-bundle.zip && sudo ./awscli-bundle/install -i $HOME/aws; fi
+    - pip install awscli
+      #- if [[ ! -d $HOME/aws ]]; then curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip" && unzip awscli-bundle.zip && sudo ./awscli-bundle/install -i $HOME/aws -b /usr/local/bin/aws; fi
     - ./build_container.sh
 
 test:
@@ -24,4 +25,4 @@ deployment:
       # - ./deploy.sh
       - mkdir dist
       - echo test > dist/test.txt
-      - $awscli s3 sync ./dist s3://$BUCKET_NAME
+      - aws s3 sync ./dist s3://$BUCKET_NAME
