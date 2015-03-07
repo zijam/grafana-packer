@@ -24,4 +24,4 @@ deployment:
       # - ./deploy.sh
       - mkdir dist
       - echo test > dist/test.txt
-      - aws s3 sync ./dist s3://$BUCKET_NAME
+      - $awscli s3 sync ./dist s3://$BUCKET_NAME
