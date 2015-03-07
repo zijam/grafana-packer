@@ -16,6 +16,8 @@ go run build.go build
 
 npm install
 
+gem install fpm
+
 go run build.go package latest
 
 cp dist/* /tmp/dist/

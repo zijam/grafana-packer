@@ -2,8 +2,9 @@ FROM centos:6.6
 
 RUN yum install -y initscripts curl tar gcc libc6-dev git gcc-c++ openssl-devel
 RUN yum install -y g++ make automake autoconf curl-devel zlib-devel httpd-devel apr-devel apr-util-devel sqlite-devel
-RUN yum install -y ruby-rdoc ruby-devel wget yum-utils bzip2 bzip2-devel
+RUN yum install -y ruby-rdoc ruby-devel wget yum-utils bzip2 bzip2-devel rubygems
 RUN yum install -y fontconfig freetype freetype-devel fontconfig-devel libstdc++
+RUN yum install -y rpm-build
 
 RUN curl -sL https://rpm.nodesource.com/setup | bash -
 RUN yum install -y nodejs --nogpgcheck
