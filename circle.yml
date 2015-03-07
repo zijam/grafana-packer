@@ -24,7 +24,5 @@ deployment:
     branch: master
     owner: grafana
     commands:
-      # - ./deploy.sh
-      - mkdir dist
-      - echo test > dist/test.txt
+      - ./deploy.sh
       - aws s3 sync ./dist s3://$BUCKET_NAME
