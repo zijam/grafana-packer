@@ -5,7 +5,7 @@
 GOPATH=/go
 REPO_PATH=$GOPATH/src/github.com/grafana/grafana
 
-go get -u github.com/grafana/grafana
+go get -u -v github.com/grafana/grafana
 go get github.com/tools/godep
 
 cd $REPO_PATH
