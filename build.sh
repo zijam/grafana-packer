@@ -10,8 +10,6 @@ go get github.com/tools/godep
 
 cd $REPO_PATH
 
-git checkout develop
-
 go run build.go build
 
 npm install
