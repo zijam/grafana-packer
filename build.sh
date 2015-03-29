@@ -5,11 +5,15 @@
 GOPATH=/go
 REPO_PATH=$GOPATH/src/github.com/grafana/grafana
 
-go get -u -v github.com/grafana/grafana
-go get github.com/tools/godep
+mkdir -p /go/src/github.com/grafana
+cd /go/src/github.com/grafana
+git clone https://github.com/grafana/grafana.git
+
+# go get -u -v github.com/grafana/grafana
 
 cd $REPO_PATH
 
+go get github.com/tools/godep
 go run build.go build
 
 npm install
