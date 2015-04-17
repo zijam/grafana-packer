@@ -25,6 +25,6 @@ deployment:
     branch: master
     owner: grafana
     commands:
-      #- ./deploy.sh
+      - ./deploy.sh
       - ./sign_packages.sh
       - aws s3 sync ./dist s3://$BUCKET_NAME
