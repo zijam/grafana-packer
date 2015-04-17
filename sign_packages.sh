@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e $PRIVATE_GPG_KEY > ~/private.key
-
-echo ~/private.key
+echo "testing  --- "
+echo $PRIVATE_GPG_KEY
+echo "testing  --- "
 
 # gpg --allow-secret-key-import --import ~/private.key
 #
