@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git clone git@github.com:torkelo/private.git ~/private-repo
+git clone git@github.com:torkelo/private.git
 
 gpg --allow-secret-key-import --import ~/private-repo/signing/private.key
 
