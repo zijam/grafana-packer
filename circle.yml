@@ -10,6 +10,7 @@ dependencies:
     - /home/ubuntu/aws
 
   pre:
+    - sudo apt-get update; sudo apt-get install rpmbuild
     - if [ -z "$BUCKET_NAME" ]; then echo Bucket name must be specified as an environment variable; exit 1; fi
     - pip install awscli
       #- if [[ ! -d $HOME/aws ]]; then curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip" && unzip awscli-bundle.zip && sudo ./awscli-bundle/install -i $HOME/aws -b /usr/local/bin/aws; fi
@@ -24,5 +25,6 @@ deployment:
     branch: master
     owner: grafana
     commands:
-      - ./deploy.sh
+      #- ./deploy.sh
+      - ./sign_packages.sh
       - aws s3 sync ./dist s3://$BUCKET_NAME

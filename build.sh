@@ -24,3 +24,4 @@ go run build.go package latest
 
 cp dist/* /tmp/dist/
 
+
