@@ -22,7 +22,7 @@ test:
 
 deployment:
   develop:
-    branch: master
+    branch: v2.0.x
     owner: grafana
     commands:
       - ./deploy.sh
