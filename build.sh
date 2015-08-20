@@ -13,8 +13,6 @@ git clone https://github.com/grafana/grafana.git
 
 cd $REPO_PATH
 
-git checkout origin/v2.1.x
-
 go get github.com/tools/godep
 go run build.go build
 
