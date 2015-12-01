@@ -20,7 +20,7 @@ RUN /bin/bash -l -c "rvm use 1.9.3 --default"
 RUN curl -sL https://rpm.nodesource.com/setup | bash -
 RUN yum install -y nodejs --nogpgcheck
 
-ENV GOLANG_VERSION 1.4.2
+ENV GOLANG_VERSION 1.5.1
 
 RUN curl -sSL https://golang.org/dl/go$GOLANG_VERSION.src.tar.gz \
 		| tar -v -C /usr/src -xz
