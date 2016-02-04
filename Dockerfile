@@ -17,7 +17,7 @@ RUN /bin/bash -l -c "rvm install 1.9.3"
 RUN /bin/bash -l -c "rvm use 1.9.3 --default"
 
 # install nodejs
-RUN curl -sL https://rpm.nodesource.com/setup | bash -
+RUN curl --silent --location https://rpm.nodesource.com/setup_5.x | bash -
 RUN yum install -y nodejs --nogpgcheck
 
 ENV GOLANG_VERSION 1.5.1
