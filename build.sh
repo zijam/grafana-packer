@@ -16,7 +16,7 @@ cd $REPO_PATH
 go get github.com/tools/godep
 go run build.go build
 
-npm install
+npm install --unsafe-perm
 
 source /etc/profile.d/rvm.sh
 rvm use 1.9.3 --default
