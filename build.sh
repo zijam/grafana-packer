@@ -19,7 +19,7 @@ go run build.go build
 npm install --unsafe-perm
 
 source /etc/profile.d/rvm.sh
-rvm use 1.9.3 --default
+rvm use 2.1.2 --default
 
 gem install fpm
 
