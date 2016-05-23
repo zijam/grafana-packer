@@ -7,7 +7,7 @@ REPO_PATH=$GOPATH/src/github.com/grafana/grafana
 
 mkdir -p /go/src/github.com/grafana
 cd /go/src/github.com/grafana
-git clone --depth 1 https://github.com/grafana/grafana.git -b master
+git clone --depth 1 https://github.com/grafana/grafana.git -b $BRANCH
 
 # go get -u -v github.com/grafana/grafana
 
