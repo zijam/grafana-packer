@@ -20,10 +20,10 @@ RUN /bin/bash -l -c "rvm use 2.1.9 --default"
 RUN curl --silent --location https://rpm.nodesource.com/setup_5.x | bash -
 RUN yum install -y nodejs --nogpgcheck
 
-ENV GOLANG_VERSION 1.5.1
+ENV GOLANG_VERSION 1.6.3
 
-RUN wget https://storage.googleapis.com/golang/go1.5.1.linux-amd64.tar.gz
-RUN tar -C /usr/local -xzf go1.5.1.linux-amd64.tar.gz
+RUN wget https://storage.googleapis.com/golang/go1.6.3.linux-amd64.tar.gz
+RUN tar -C /usr/local -xzf go1.6.3.linux-amd64.tar.gz
 
 ENV PATH /usr/local/go/bin:$PATH
 
