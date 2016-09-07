@@ -10,7 +10,8 @@ RUN yum install -y rpm-build patch readline readline-devel libtool bison lzma
 # install necessary utilities
 RUN yum install -y which tar
 RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-RUN curl -sSL https://get.rvm.io | bash -s stable
+#RUN curl -sSL https://get.rvm.io | bash -s stable
+RUN curl -sSl https://raw.githubusercontent.com/rvm/rvm/master/binscripts/rvm-installer | bash -s stable
 RUN source /etc/profile.d/rvm.sh
 RUN /bin/bash -l -c "rvm requirements"
 RUN /bin/bash -l -c "rvm install 2.1.9"
