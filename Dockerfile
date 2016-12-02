@@ -24,7 +24,7 @@ RUN yum install -y nodejs --nogpgcheck
 ENV GOLANG_VERSION 1.7.4
 
 RUN wget https://storage.googleapis.com/golang/go1.7.4.linux-amd64.tar.gz
-RUN tar -C /usr/local -xzf go1.7.3.linux-amd64.tar.gz
+RUN tar -C /usr/local -xzf go1.7.4.linux-amd64.tar.gz
 
 ENV PATH /usr/local/go/bin:$PATH
 
