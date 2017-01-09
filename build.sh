@@ -9,14 +9,11 @@ mkdir -p /go/src/github.com/grafana
 cd /go/src/github.com/grafana
 git clone --depth 1 https://github.com/grafana/grafana.git -b $BRANCH
 
-# go get -u -v github.com/grafana/grafana
-
 cd $REPO_PATH
 
-go get github.com/tools/godep
 go run build.go build
-
-npm install --unsafe-perm
+npm install -g yarn
+yarn install
 
 source /etc/profile.d/rvm.sh
 rvm use 2.1.9 --default
