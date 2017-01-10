@@ -18,7 +18,7 @@ dependencies:
 test:
   override:
      - echo "test"
-     - echo $BRANCH
+     - echo ${BRANCH}
 
 deployment:
   develop:
