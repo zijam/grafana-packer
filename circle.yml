@@ -7,7 +7,6 @@ machine:
 dependencies:
   cache_directories:
     - "~/docker"
-    #- /home/ubuntu/aws
 
   pre:
     - sudo apt-get update; sudo apt-get install rpm
@@ -18,11 +17,11 @@ dependencies:
 test:
   override:
      - echo "test"
-     - echo ${BRANCH}
+     - echo ${GRAFANA_BRANCH}
 
 deployment:
   develop:
-    branch: v4.1.x
+    branch: new_build
     owner: grafana
     commands:
       - ./deploy.sh

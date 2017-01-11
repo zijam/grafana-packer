@@ -7,7 +7,8 @@ trigger_build_url=https://circleci.com/api/v1/project/grafana/grafana-docker/tre
 post_data=$(cat <<EOF
 {
   "build_parameters": {
-    "CREATE_MASTER_IMAGE": "true"
+    "CREATE_MASTER_IMAGE": "true",
+    "GRAFANA_BRANCH": ${GRAFANA_BRANCH}
   }
 }
 EOF

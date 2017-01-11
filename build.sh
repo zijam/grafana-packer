@@ -1,14 +1,17 @@
 #!/bin/bash
 
-# This is ment to run inside this build container
+#   
+#   This script is executed from within the container.
+#
 
 GOPATH=/go
 REPO_PATH=$GOPATH/src/github.com/grafana/grafana
 
 mkdir -p /go/src/github.com/grafana
 cd /go/src/github.com/grafana
-echo $BRANCH
-git clone --depth 1 https://github.com/grafana/grafana.git -b $BRANCH
+
+echo "GRAFANA BRANCH: ${GRAFANA_BRANCH}"
+git clone --depth 1 https://github.com/grafana/grafana.git -b $GRAFANA_BRANCH
 
 cd $REPO_PATH
 
