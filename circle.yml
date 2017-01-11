@@ -18,6 +18,7 @@ test:
   override:
      - echo "test"
      - echo ${GRAFANA_BRANCH}
+     - set GRAFANA_BRANCH = {$GRAFANA_BRANCH}
 
 deployment:
   develop:
